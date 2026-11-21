@@ -1,0 +1,37 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: catalog-db
+    environment:
+      MYSQL_ROOT_PASSWORD: local-root-pass
+      MYSQL_DATABASE: catalog_db
+      MYSQL_USER: app
+      MYSQL_PASSWORD: local-app-pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - catalog-db-data:/var/lib/mysql
+    healthcheck:
+      # 127.0.0.1 y no localhost: fuerza TCP, que solo responde cuando MySQL terminó de inicializarse
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  app:
+    # Imagen creada con ./mvnw spring-boot:build-image (nombre por defecto: artifactId:version)
+    image: catalog:0.0.1-SNAPSHOT
+    container_name: catalog-app
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      # Dentro de Docker el host es el nombre del servicio (db), no localhost
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/catalog_db?allowPublicKeyRetrieval=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: app
+      SPRING_DATASOURCE_PASSWORD: local-app-pass
+    ports:
+      - "8080:8080"
+
+volumes:
+  catalog-db-data:
