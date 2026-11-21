@@ -1,3 +1,13 @@
 spring:
   application:
     name: catalog
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/catalog_db?allowPublicKeyRetrieval=true&useSSL=false}
+    username: ${SPRING_DATASOURCE_USERNAME:app}
+    password: ${SPRING_DATASOURCE_PASSWORD:local-app-pass}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
