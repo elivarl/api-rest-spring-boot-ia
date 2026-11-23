@@ -132,12 +132,10 @@ Dentro de Docker el host de la base es `db`, no `localhost`. Eso ya lo define `c
 ---
 
 ## ¿Y ahora?
-
 La API funciona, pero corre solo en tu máquina.
 
-- **¿Cómo llega a producción sin desplegarla a mano cada vez?** → [Curso de CI/CD con Spring Boot, GitHub Actions y AWS]([https://devs-icodeap.wisboo.com/product/curso-ci-cd-con-spring-boot-github-actions-y-aws?utm_campaign=lead-api-ia])
-- **¿Qué pasa con tus 3 capas si mañana cambias la base de datos o agregas un modelo de IA?** → [Curso de Arquitectura Hexagonal]([https://devs-icodeap.wisboo.com/product/spring-boot-avanzado-ecommerce-con-arquitectura-hexagonal-y-buenas-practicas?utm_campaign=lead-api-ia])
-
+- **¿Cómo llega a producción sin desplegarla a mano cada vez?** → [Curso de CI/CD con Spring Boot, GitHub Actions y AWS](https://devs-icodeap.wisboo.com/product/curso-ci-cd-con-spring-boot-github-actions-y-aws?utm_source=github&utm_campaign=lead-api-ia)
+- **¿Qué pasa con tus 3 capas si mañana cambias la base de datos o agregas un modelo de IA?** → [Curso de Arquitectura Hexagonal](https://devs-icodeap.wisboo.com/product/spring-boot-avanzado-ecommerce-con-arquitectura-hexagonal-y-buenas-practicas?utm_source=github&utm_campaign=lead-api-ia)
 ---
 
 Hecho por **Elivar Largo** · [iCodeap](https://icodeap.com) · Con IA, pero entendiendo.
