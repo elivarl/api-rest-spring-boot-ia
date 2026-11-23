@@ -5,7 +5,7 @@ Si un pedido contradice este archivo, no lo resuelvas por tu cuenta: dilo y preg
 
 ## Stack
 
-- Java 21 · Spring Boot 4.1.x · Maven con wrapper (`./mvnw`)
+- Java 21 · Spring Boot 4.2.x · Maven con wrapper (`./mvnw`)
 - Spring MVC, Spring Data JPA, Bean Validation, MySQL 8.4, Lombok
 - `groupId` `com.icodeap` · `artifactId` `catalog` · paquete raíz `com.icodeap.catalog` · clase principal `CatalogApplication`
 
