@@ -6,6 +6,8 @@
 
 Una API REST de productos en 3 capas, construida con un agente de IA siguiendo un método de tres pasos: **tú diseñas, la IA genera, tú revisas**.
 
+>**Cada commit corresponde a un prompt de la clase: revisa el historial para ver qué generó el agente en cada capa.**
+
 ---
 
 ## Qué hay aquí
